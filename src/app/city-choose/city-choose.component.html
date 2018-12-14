@@ -1,0 +1,13 @@
+<span class="nav-text">{{city}}:{{displaySource}}<a (click)="open()"> 选择来源</a></span>
+
+<nz-drawer [nzClosable]="false" [nzVisible]="visible" nzPlacement="right" nzTitle="Basic Drawer" (nzOnClose)="close()">
+  <nz-tree-select
+    style="width: 250px"
+    [nzDefaultExpandedKeys]="expandKeys"
+    [nzNodes]="nodes"
+    nzShowSearch
+    nzPlaceHolder="Please select"
+    [(ngModel)]="value"
+    (ngModelChange)="onChange($event)">
+  </nz-tree-select>`
+</nz-drawer>

@@ -1,0 +1,42 @@
+<!-- NG-ZORRO -->
+<nz-layout>
+  <nz-sider nzCollapsible [(nzCollapsed)]="isCollapsed" [nzTrigger]="triggerTemplate">
+    <div class="logo">
+    </div>
+    <ul nz-menu [nzTheme]="'dark'" [nzMode]="'inline'" [nzInlineCollapsed]="isCollapsed">
+      <li nz-menu-item>
+        <span title><i nz-icon type="user"></i><app-city-choose></app-city-choose></span>
+
+
+      </li>
+      <li nz-submenu>
+        <span title><i nz-icon type="team"></i><span class="nav-text">检索条件</span></span>
+        <ul>
+          <li nz-menu-item><span nz-tooltip nzTitle="分页的第几页,如 1"><input nz-input placeholder="" [(ngModel)]="page"></span></li>
+          <li nz-menu-item><span nz-tooltip nzTitle="数目，如 30"><input nz-input placeholder="" [(ngModel)]="size"></span></li>
+          <li nz-menu-item><span nz-tooltip nzTitle="最近多少天内，如 14"><input nz-input placeholder="" [(ngModel)]="intervalDay"></span></li>
+          <li nz-menu-item><span nz-tooltip nzTitle="最低价格，如 2000"><input nz-input placeholder="最低价格，如 2000" [(ngModel)]="fromPrice"></span></li>
+          <li nz-menu-item><span nz-tooltip nzTitle="最高价格，如 5000"><input nz-input placeholder="最高价格，如 5000" [(ngModel)]="toPrice"></span></li>
+        </ul>
+      </li>
+      <li nz-menu-item><span><i nz-icon type="file"></i><span class="nav-text" (click)="search()">search</span></span></li>
+    </ul>
+  </nz-sider>
+  <nz-layout>
+    <nz-header style="background: #fff; padding:0;">
+      <i class="trigger" nz-icon [type]="isCollapsed?'menu-unfold':'menu-fold'" (click)="isCollapsed=!isCollapsed"></i>
+    </nz-header>
+    <nz-content style="margin:0 16px;">
+      <div id="mapTwo" style="width: 100%;height: 700px">
+      </div>
+    </nz-content>
+    <nz-footer style="text-align: center;">Ant Design ©2017 Implement By Angular</nz-footer>
+  </nz-layout>
+</nz-layout>
+<ng-template #trigger>
+  <i nz-icon type="up"></i>
+</ng-template>
+
+
+
+
