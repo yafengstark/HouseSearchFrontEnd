@@ -11,7 +11,7 @@ import {AppTempService} from "./app-temp.service";
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'Tour of Heroes';
+  title = '地图搜租房';
 
   page = 1;
   size = 30;
