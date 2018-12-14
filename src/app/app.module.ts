@@ -37,7 +37,7 @@ const icons: IconDefinition[] = Object.keys(antDesignIcons).map(key => antDesign
     AppRoutingModule,
     HttpClientModule,
 
-    
+
 
     BrowserAnimationsModule,
 
