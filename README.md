@@ -13,6 +13,11 @@
 没有[liguobao](https://github.com/liguobao)的这个项目，就不会有现在这个项目，十分感谢。
 
 
+### 已经做的
+* Angular搭建界面
+* Leaflet地图相关操作
+
+
 ### 正在做的
 * 修复bug
 * 新加功能

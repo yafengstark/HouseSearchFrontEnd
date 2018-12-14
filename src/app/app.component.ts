@@ -1,5 +1,5 @@
 import {Component, OnInit, TemplateRef, ViewChild} from '@angular/core';
-import {HeroService} from "./hero.service";
+
 import {Mark} from "./mark";
 import {MapService} from "./map.service";
 import {AppTempService} from "./app-temp.service";
@@ -11,7 +11,7 @@ import {AppTempService} from "./app-temp.service";
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = '地图搜租房';
+
 
   page = 1;
   size = 30;
