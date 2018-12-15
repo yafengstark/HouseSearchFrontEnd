@@ -57,7 +57,7 @@ export class CityChooseComponent implements OnInit{
 
 
   onChange($event: string): void {
-    console.log($event);
+    // console.log($event);
     this.city = $event.split(',')[0];
     this.source =  $event.split(',')[1];
     this.displaySource = $event.split(',')[2];
@@ -78,7 +78,7 @@ export class CityChooseComponent implements OnInit{
    this.http.get<SourceCityResponse>('https://woyaozufang.live/v2/cities?index=0&count=1')
       .pipe(
         tap((data: SourceCityResponse) => {
-          console.log(data.data);
+          // console.log(data.data);
 
           if (data.success == false){
             this.nodes = [];

@@ -20,6 +20,7 @@
             "tsConfig": "src/tsconfig.app.json",
             "assets": [
               "src/favicon.ico",
+              "src/marker-shadow.png",
               "src/assets",
               {
                 "glob": "**/*",
