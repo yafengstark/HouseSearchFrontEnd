@@ -80,7 +80,7 @@ export class MapService {
     this.baseLayers.底图.addTo(this.map);
 
 
-    var LeafIcon = L.Icon.extend({
+    let LeafIcon = L.Icon.extend({
       options: {
         shadowUrl: 'assets/image/icon/leaf-shadow.png',
         iconSize: [38, 95],
@@ -90,11 +90,11 @@ export class MapService {
         popupAnchor: [-3, -76]
       }
     });
-    var greenIcon = new LeafIcon({iconUrl: 'assets/image/icon/leaf-green.png'}),
+    let greenIcon = new LeafIcon({iconUrl: 'assets/image/icon/leaf-green.png'}),
       redIcon = new LeafIcon({iconUrl: 'assets/image/icon/leaf-red.png'}),
       orangeIcon = new LeafIcon({iconUrl: 'assets/image/icon/leaf-orange.png'});
 
-    L.marker([31.231706, 121.472644], {icon: greenIcon}).addTo(this.map).bindPopup("I am a green leaf.");
+    L.marker([31.231706, 121.472644], {icon: greenIcon}).addTo(this.map).bindPopup("上海市");
 
 
     // L.marker([31.231706, 121.472644]).addTo(this.map)
@@ -157,9 +157,23 @@ export class MapService {
               picturesString = picUrlsString + "<a   href=\"" +url + "\" target=\"_blank\">"+url+"</a>, "
             }
 
+            let LeafIcon = L.Icon.extend({
+              options: {
+                shadowUrl: 'assets/image/icon/leaf-shadow.png',
+                iconSize: [38/2, 95/2],
+                shadowSize: [50/2, 64/2],
+                iconAnchor: [22/2, 94/2],
+                shadowAnchor: [4/2, 62/2],
+                popupAnchor: [-3/2, -76/2]
+              }
+            });
+            let greenIcon = new LeafIcon({iconUrl: 'assets/image/icon/leaf-green.png'}),
+              redIcon = new LeafIcon({iconUrl: 'assets/image/icon/leaf-red.png'}),
+              orangeIcon = new LeafIcon({iconUrl: 'assets/image/icon/leaf-orange.png'});
 
-            let marker = L.marker(new L.LatLng(item.latitude, item.longitude),
-              {title: item.title});
+
+
+            let marker = L.marker(new L.LatLng(item.latitude, item.longitude),{icon: redIcon, title: item.title});
             marker.bindPopup("<h3>" + item.title + "</h3>"
               + item.text + "<br/>"
               // + picUrlsString + "<br/>"
